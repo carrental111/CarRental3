@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="admin" extends="json-default" namespace="/admin">
+	  	<action name="Login*" class="com.nkl.admin.action.LoginAction" method="{1}">
+	  		<result name="error">login.jsp</result>
+	  		<result name="success" type="redirect">index.jsp</result>
+	  		<result name="logout" type="redirect">login.jsp</result>
+	  	</action>
+	  	
+	  	<action name="Admin_*" class="com.nkl.admin.action.AdminAction" method="{1}">
+	  		<result name="loginTip" type="redirect">loginTip.jsp</result>
+	  		<result name="error">error.jsp</result>
+	  		<result name="infoTip">infoTip.jsp</result>
+	  		<result name="userInfo" type="redirect">modifyInfo.jsp</result>
+	  		<result name="userPwd" type="redirect">modifyPwd.jsp</result>
+	  		<result name="customShow">customShow.jsp</result>
+	  		<result name="customEdit">customEdit.jsp</result>
+	  		<result name="carShow">carShow.jsp</result>
+	  		<result name="carEdit">carEdit.jsp</result>
+	  		<result name="rentalShow">rentalShow.jsp</result>
+	  		<result name="rentalEdit">rentalEdit.jsp</result> 
+	  		<result name="rentalExtend">rentalExtend.jsp</result>
+	  	</action>
+	  	
+	</package>
+</struts>    
